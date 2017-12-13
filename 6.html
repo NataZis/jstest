@@ -19,10 +19,21 @@
 	<a href="https://www.yandex.ru/">yandex</a>
 	<a href="https://habrahabr.ru">habrahabr</a>
 	<a href="https://www.youtube.com">youtube</a>
-	
+
 	<script>
-		var a=['Hanuka', 'Sameah'];
-		alert (a);
+		var en=[-2, -120, 18, 130, 0, 3];
+		for (var i = 0; i < en.length; i++) {
+    if(en[i] > en[0]){
+        en[0] = en[i];
+			}
+		}
+		alert(en[0]);
+			for (var i = 0; i > en.length; i--) {
+    if(en[i] < en[0]){
+        en[0] = en[i];
+    			}
+			}
+		alert(en[1]);
 	</script>
 	
 </body>

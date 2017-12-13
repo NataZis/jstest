@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1></h1>
+	<h2></h2>
+	<h3></h3>
+	<h4></h4>
+
+	<div>
+		<p id="number1"></p>
+	</div>
+	<div>
+		<p id="number1"></p>
+	</div>
+	<div>
+		<p id="number1"></p>
+	</div>
+	<div>
+		<p id="number1"></p>
+	</div>
+
+	<a href="https://www.google.ru/">google</a>
+	<a href="https://www.yandex.ru/">yandex</a>
+	<a href="https://habrahabr.ru">habrahabr</a>
+	<a href="https://www.youtube.com">youtube</a>
+
+
+	<form>
+		<input type="button" value="Start" onclick="doTimer()" />
+		<input type="text" id="txt" />
+		<input type="button" value="Stop" onclick="stopCount()" />
+	</form>
+
+	<script type="text/javascript">
+		var c = 0;
+		var t;
+		var timer_is_on = 0;
+
+		function timedCount() {
+			document.getElementById('txt').value = c;
+			c = c + 1;
+			t = setTimeout("timedCount()", 1000);
+		}
+
+		function doTimer() {
+			if (!timer_is_on) {
+				timer_is_on = 1;
+				timedCount();
+			}
+		}
+
+		function stopCount() {
+			clearTimeout(t);
+			timer_is_on = 0;
+		}
+	</script>
+
+</body>
+
+</html>

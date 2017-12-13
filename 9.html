@@ -19,10 +19,26 @@
 	<a href="https://www.yandex.ru/">yandex</a>
 	<a href="https://habrahabr.ru">habrahabr</a>
 	<a href="https://www.youtube.com">youtube</a>
+
 	
+	<button class="but">Счетчик</button>
+	<span id="span"></span>
+
 	<script>
-		var a=['Hanuka', 'Sameah'];
-		alert (a);
+		window.onload = function () {
+		span = document.getElementById('span');
+		var count = 0; 
+		span.innerHTML = count; 
+	
+		document.body.onclick = function (e) {
+		e = e || event;
+		var target = e.target || e.srcElement;
+		if (target.className == 'but') {
+			count++;
+			span.innerHTML = count;
+				}
+			}
+		}
 	</script>
 	
 </body>
